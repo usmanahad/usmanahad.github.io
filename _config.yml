@@ -69,8 +69,9 @@ social:
   type                   : "Person" # Person or Organization (defaults to Person)
   name                   : "Usman Ahad" # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - "https://scholar.google.com/citations?user=khNlCjIAAAAJ"
     - "https://github.com/usmanahad"
-    - "https://www.linkedin.com/in/usman-ahad"
+    - "https://www.linkedin.com/in/usman-ahad/"
 
 # Analytics
 analytics:
@@ -84,11 +85,11 @@ author:
   name             : "Usman Ahad"
   avatar           : "profile.jpeg"
   bio              : "Computer Science student and AI researcher"
-  location         : "Lahore, Pakistan"
+  location         : "Lahore, Punjab, Pakistan"
   employer         :
   pubmed           : 
-  googlescholar    :
-  email            : "usman.ahad@lums.edu.pk"
+  googlescholar    : "https://scholar.google.com/citations?user=khNlCjIAAAAJ"
+  email            : "27100041@lums.edu.pk"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -103,7 +104,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "usman-ahad"
+  linkedin         : "usman-ahad/"
   orcid            :
   pinterest        :
   soundcloud       :

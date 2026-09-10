@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* B.S. in Computer Science, Lahore University of Management Sciences, Aug. 2023 -- Present
+* B.S. in Computer Science, Lahore University of Management Sciences, Lahore, Punjab, Pakistan, Aug. 2023 -- Present
   * CGPA: 3.69/4.00
   * Dean's Honour List for three consecutive academic years
 
