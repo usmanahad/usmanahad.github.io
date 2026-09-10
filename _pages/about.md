@@ -10,7 +10,7 @@ redirect_from:
 
 ## About me
 
-Hello! I am a B.S. Computer Science student at [Lahore University of Management Sciences](https://lums.edu.pk/) in Lahore, Punjab, Pakistan, with a 3.69/4.00 CGPA and three consecutive years on the Dean's Honour List.
+Hello! I am a B.S. Computer Science student at [Lahore University of Management Sciences](https://lums.edu.pk/) in Lahore, Punjab, Pakistan, with a 3.64/4.00 CGPA and three consecutive years on the Dean's Honour List.
 
 My research focuses on efficient and reliable AI systems, especially *vision-language reasoning*, *privacy-preserving edge AI*, *federated learning*, and *open-set recognition*. I enjoy taking ideas from model design through careful evaluation and deployment on resource-constrained hardware.
 
@@ -29,6 +29,10 @@ Developed a training-free selection framework that combines candidate-calibrated
 ### Mind Your Own Business: Consent-Based Audio Privacy for Smart Glasses
 
 Built a semi-real-time Raspberry Pi 5 pipeline for speaker diarization, streaming transcription, cross-window disclosure tracking, speech anonymization, and consent-gated restoration. A DPO-tuned Qwen3.5-2B model reduced privacy leakage by **24.7%** versus the base model while improving utility by 2.5 points on 143 held-out transcripts; the Q4 edge variant retained 0.902 utility.
+
+### FedCPR: Federated Open-Set Recognition with Latent Prototype Rejection
+
+Developed latent-space outlier synthesis with curriculum learning under FedAvg, achieving **85.42% open-set AUROC** and **90.96% closed-set accuracy** on CIFAR-10 across five non-IID clients while outperforming PROSER, FedPD, and ARPL.
 
 ### WatchTower: Network Anomaly Detection for Edge Devices
 
