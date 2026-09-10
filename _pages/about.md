@@ -17,8 +17,8 @@ My research focuses on efficient and reliable AI systems, especially *vision-lan
 ## Current
 
 - **Aug. 2026:** Began serving as a Teaching Assistant for **AI on Edge Devices** at LUMS.
-- **Sep. 2026:** Completed **VisConf**, a training-free quality-aware consensus framework for Best-of-N VLM reasoning.
-- **Sep. 2026:** Finalizing **Mind Your Own Business**, a consent-based audio privacy pipeline for smart glasses, for research submission.
+- **Sep. 2026:** Submitted **VisConf**, a training-free quality-aware consensus framework for Best-of-N VLM reasoning, to the **NeurIPS 2026 VLM4RWD Workshop**.
+- **Sep. 2026:** Submitted **Mind Your Own Business**, a consent-based audio privacy pipeline for smart glasses, to **PerCom 2026**.
 
 ## Selected research
 
@@ -26,9 +26,13 @@ My research focuses on efficient and reliable AI systems, especially *vision-lan
 
 Developed a training-free selection framework that combines candidate-calibrated Self-Certainty, visual engagement, and Rank-Weighted Consensus. Across three VLMs, three benchmarks, and sampling budgets of 8, 16, and 32, VisConf achieved **56.36% mean accuracy**, led all baselines in **24 of 27 settings**, and exceeded Self-Consistency by 0.98 points.
 
+*Submitted to the NeurIPS 2026 VLM4RWD Workshop.*
+
 ### Mind Your Own Business: Consent-Based Audio Privacy for Smart Glasses
 
 Built a semi-real-time Raspberry Pi 5 pipeline for speaker diarization, streaming transcription, cross-window disclosure tracking, speech anonymization, and consent-gated restoration. A DPO-tuned Qwen3.5-2B model reduced privacy leakage by **24.7%** versus the base model while improving utility by 2.5 points on 143 held-out transcripts; the Q4 edge variant retained 0.902 utility.
+
+*Submitted to PerCom 2026.*
 
 ### FedCPR: Federated Open-Set Recognition with Latent Prototype Rejection
 

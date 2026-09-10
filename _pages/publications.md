@@ -14,6 +14,8 @@ author_profile: true
 
 Developed a training-free framework that combines candidate-calibrated Self-Certainty with visual-attention engagement and hyperparameter-free Rank-Weighted Consensus, improving VLM answer selection without external verifier or reward models. Across MathVista, MMMU-Pro, and MMStar, VisConf achieved **56.36% mean accuracy**, outperformed all baselines in **24 of 27** model-dataset-budget settings, and delivered gains up to 12.18 points when correct rollouts were present but outnumbered.
 
+*Submitted to the NeurIPS 2026 VLM4RWD Workshop.*
+
 ## Mind Your Own Business: Consent-Based Audio Privacy for Smart Glasses
 
 **Jan. 2026 -- Sep. 2026**
@@ -21,6 +23,8 @@ Developed a training-free framework that combines candidate-calibrated Self-Cert
 *PyTorch, Qwen3.5-2B, LoRA, DPO, RAG, LS-EEND, Speech Processing*
 
 Built a paced, semi-real-time Raspberry Pi 5 pipeline that diarizes and transcribes speech, tracks cumulative disclosures across rolling windows, anonymizes linked identifiers, resynthesizes speaker-independent audio, and gates restoration on bystander consent. Distilled GPT-5.6 Luna anonymization into Qwen3.5-2B using 30,960 SFT examples and 6,241 DPO preference pairs. The DPO model reduced leakage by **24.7%** versus the 2B base model while increasing utility by 2.5 points; it remained within 6.5% of GPT-5.6 Luna's leakage while exceeding its utility by 1.4 points.
+
+*Submitted to PerCom 2026.*
 
 ## FedCPR: Federated Open-Set Recognition with Latent Prototype Rejection
 
