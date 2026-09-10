@@ -10,7 +10,7 @@ redirect_from:
 
 ## About me
 
-Hello! I am a B.S. Computer Science student at [Lahore University of Management Sciences](https://lums.edu.pk/) in Lahore, Punjab, Pakistan, with a 3.64/4.00 CGPA and three consecutive years on the Dean's Honour List.
+Hello! I am a B.S. Computer Science student at [Lahore University of Management Sciences](https://lums.edu.pk/) in Lahore, Punjab, Pakistan, with three consecutive years on the Dean's Honour List.
 
 My research explores model training and efficient AI systems, especially *vision-language reasoning*, *privacy-preserving edge AI*, and *federated learning*. I’m interested in understanding why models succeed or fail, then translating those insights into reliable systems that work beyond the lab.
 
