@@ -1,51 +1,37 @@
 ---
 permalink: /
-title: "Ali Ahad"
-excerpt: "Ali Ahad is a Ph.D. in Electrical and Computer Engineering, advised by Prof. Yonghwi Kwon. His research spans software systems security, program analysis, reverse engineering, and system forensics."
+title: "Usman Ahad"
+excerpt: "Usman Ahad is a Computer Science student at LUMS researching efficient multimodal reasoning, privacy-preserving edge AI, and federated open-set learning."
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-## About me:
+## About me
 
-Hello! I am Ali Ahad, a Ph.D. in [Electrical and Computer Engineering](https://ece.umd.edu/). I was advised by Prof. [Yonghwi Kwon](https://yonghwi-kwon.github.io/). My primary research focus lies in the broad spectrum of Software Systems Security and System Forensics. 
+Hello! I am a B.S. Computer Science student at [Lahore University of Management Sciences](https://lums.edu.pk/) with a 3.69/4.00 CGPA and three consecutive years on the Dean's Honour List.
 
-**Research interests.**
-My research interests include *Systems and Software security*, *Program analysis*, *Reverse Engineering*, and *Forensics*.
+My research focuses on efficient and reliable AI systems, especially *vision-language reasoning*, *privacy-preserving edge AI*, *federated learning*, and *open-set recognition*. I enjoy taking ideas from model design through careful evaluation and deployment on resource-constrained hardware.
 
-<!-- ---- -->
+## Current
 
-## News:
-- **Apr '26**: Successfully Defended - Dr. Ali Ahad! ✅🎓
-- **Jan '25**: Passed my Ph.D. Proposal. Now a Ph.D. Candidate! ✅⏳
-- **May '24**: Joined *Nvidia* as "System Software Intern, Data Center System Security" for Summer'24 👨‍💼
-- **Jan '24**: Enrolled at [*UMD*](https://ece.umd.edu/) to continue my PhD at their [ECE Department](https://ece.umd.edu/)! 📚
-- **Nov '23**: I will be following my [lab](https://yonghwi-kwon.github.io/seed/) and join [*UMD*](https://ece.umd.edu/) in Spring'24 to continue my Ph.D there! 🏃‍♂️‍➡️
-- **Sep '23**: Joined *Nvidia* as "Software Intern, Security" for Fall'23 👨‍💼
-- **Jul '23**: Completed my MS at *UVA*! 🎓
-- **May '23**: Passed my Ph.D. Qualifying Exam! ✅⏳
-- **Apr '23**: "*FreePart: Hardening Data Processing Software via Framework-based Partitioning and Isolation*" accepted in [ASPLOS'24](https://www.asplos-conference.org/asplos2024/) 🥳 
-- **Nov '22**: "*PyFET: Forensically Equivalent Transformation for Python Binary Decompilation*" accepted in [S&P'23](https://www.ieee-security.org/TC/SP2023/) 🥳 
-- **Nov '21**: "*SwarmFlawFinder: Discovering and Exploiting Logic Flaws of Swarm Algorithms*" accepted in [S&P'22](https://www.ieee-security.org/TC/SP2022/) 🥳
-- **Sep '21**: "*Forensic Analysis of Configuration-based Attacks*" accepted in [NDSS'22](https://www.ndss-symposium.org/ndss2022/) 🥳 
-- **May '21**: "*Swarmbug: Debugging Configuration Bugs in Swarm Robotics*" accepted in [FSE'21](https://2021.esec-fse.org/) 🥳
-- **Mar '21**: "*Spinner: Automated Dynamic Command Subsystem Perturbation*" accepted in [CCS'21](https://www.sigsac.org/ccs/CCS2021/) 🥳
-<!-- - \[08/24/2020]: Started Ph.D. at **UVA** -->
+- **Aug. 2026:** Began serving as a Teaching Assistant for **AI on Edge Devices** at LUMS.
+- **Sep. 2026:** Completed **VisConf**, a training-free quality-aware consensus framework for Best-of-N VLM reasoning.
+- **Sep. 2026:** Finalizing **Mind Your Own Business**, a consent-based audio privacy pipeline for smart glasses, for research submission.
 
+## Selected research
 
-## Publications:
-1. [*"FreePart: Hardening Data Processing Software via Framework-based Partitioning and Isolation"*](/files/freepart_asplos24.pdf): <u>Ali Ahad</u>, Gang Wang, Chung Hwan Kim, Suman Jana, Zhiqiang Lin, and Yonghwi Kwon, *In Proc. of the 29th International Conference on Architectural Support for Programming Languages and Operating Systems (**ASPLOS '24**)*
+### VisConf: Quality-Aware Consensus for Best-of-N VLM Reasoning
 
-2. [*"PyFET: Forensically Equivalent Transformation for Python Binary Decompilation"*](/files/pyfet_sp23.pdf): <u>Ali Ahad</u>, Chijung Jung, Ammar Askar, Doowon Kim, Taesoo Kim, and Yonghwi Kwon, *In Proc. of the 44th IEEE Symposium on Security and Privacy (**S&P '23**)*
+Developed a training-free selection framework that combines candidate-calibrated Self-Certainty, visual engagement, and Rank-Weighted Consensus. Across three VLMs, three benchmarks, and sampling budgets of 8, 16, and 32, VisConf achieved **56.36% mean accuracy**, led all baselines in **24 of 27 settings**, and exceeded Self-Consistency by 0.98 points.
 
-3. [*"SwarmFlawFinder: Discovering and Exploiting Logic Flaws of Swarm Algorithms"*](/files/swarmflawfinder_sp22.pdf): Chijung Jung, <u>Ali Ahad</u>, Yuseok Jeon, and Yonghwi Kwon, *In Proc. of the 43rd IEEE Symposium on Security and Privacy (**S&P '22**)*
+### Mind Your Own Business: Consent-Based Audio Privacy for Smart Glasses
 
-4. [*"Forensic Analysis of Configuration-based Attacks"*](/files/forensic_analysis_of_config_attacks_ndss22.pdf): Muhammad Adil Inam, Wajih Ul Hassan, <u>Ali Ahad</u>, Adam Bates, Rashid Tahir, Tianyin Xu, and Fareed Zaffar, *In Proc. of the 29th Network and Distributed System Security Symposium (**NDSS '22**)*
+Built a semi-real-time Raspberry Pi 5 pipeline for speaker diarization, streaming transcription, cross-window disclosure tracking, speech anonymization, and consent-gated restoration. A DPO-tuned Qwen3.5-2B model reduced privacy leakage by **24.7%** versus the base model while improving utility by 2.5 points on 143 held-out transcripts; the Q4 edge variant retained 0.902 utility.
 
-5. [*"Swarmbug: Debugging Configuration Bugs in Swarm Robotics"*](/files/swarmbug-fse21.pdf): Chijung Jung, <u>Ali Ahad</u>, Jinho Jung, Sebastian Elbaum, and Yonghwi Kwon, *In Proc. of 29th ACM SIGSOFT International Symposium on the Foundations of Software Engineering (**FSE '21**)*
+### WatchTower: Network Anomaly Detection for Edge Devices
 
-6. [*"Spinner: Automated Dynamic Command Subsystem Perturbation"*](/files/spinner-ccs21-extended-ver.pdf): Meng Wang, Chijung Jung, <u>Ali Ahad</u>, and Yonghwi Kwon, *In Proc. of 28th ACM Conference on Computer and Communications Security (**CCS '21**)*
+Built a memory-token Transformer with PROSER latent outliers and FedProx, achieving **93.66% accuracy** and **92.83% F1** on CIC-IDS2017. INT8 quantization reduced model size by **67.5%**, while TVM auto-tuning reached 3.82 ms single-core latency and more than 260 packets per second on Raspberry Pi 5.
 
-
+[See all research projects](/research/) or [download my CV](/files/resume.pdf).

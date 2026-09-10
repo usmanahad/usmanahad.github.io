@@ -11,23 +11,21 @@ redirect_from:
 
 Education
 ======
-* B.S. in Computer Science, Lahore University of Management Sciences, 2020
-* M.S. in Computer Science, University of Virginia, 2023
-* Ph.D. in ECE, University of Maryland, College Park (Present)
+* B.S. in Computer Science, Lahore University of Management Sciences, Aug. 2023 -- Present
+  * CGPA: 3.69/4.00
+  * Dean's Honour List for three consecutive academic years
 
-Publications
+Research
 ======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+* Jan. 2026 -- Sep. 2026: VisConf — quality-aware consensus for Best-of-N VLM reasoning
+* Jan. 2026 -- Sep. 2026: Mind Your Own Business — consent-based audio privacy for smart glasses
+* Nov. 2025 -- Feb. 2026: FedCPR — federated open-set recognition with latent prototype rejection
+* Aug. 2025 -- Dec. 2025: WatchTower — Transformer-based network anomaly detection for edge devices
 
-Work experience
+Teaching experience
 ======
-* Aug 2020 - Present: Research Assistant
-  * University of Virginia
-  * Supervisor: Professor Yonghwi Kwon
+* Aug. 2026 -- Present: Teaching Assistant, AI on Edge Devices, LUMS
+* Jan. 2026 -- May 2026: Teaching Assistant, Deep Learning, LUMS
+* Jan. 2025 -- May 2025: Teaching Assistant, Introduction to Programming, LUMS
 
-* Dec 2019 - Aug 2020: Developer Advocate
-  * Educative.io
-  * Duties included: Technical content creation and revision
-  
+[Download the full one-page CV](/files/resume.pdf).

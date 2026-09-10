@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Ali Ahad"
+title                    : "Usman Ahad"
 title_separator          : "-"
-name                     : &name "Ali Ahad"
-description              : &description "Ali Ahad is a Ph.D. in Electrical and Computer Engineering researching software systems security, program analysis, reverse engineering, and system forensics."
-url                      : https://aliahad97.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Usman Ahad"
+description              : &description "Usman Ahad is a Computer Science student at LUMS researching efficient multimodal reasoning, privacy-preserving edge AI, and federated open-set learning."
+url                      : https://usmanahad.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "aliahad97/aliahad97.github.io"
+repository               : "usmanahad/usmanahad.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -50,8 +50,6 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 
 # SEO Related
-# Verified via the HTML-file method (_pages/google1d7744f224381263.html).
-# Set this only if you switch to the meta-tag method; it must be the token, not a path.
 google_site_verification :
 bing_site_verification   :
 alexa_site_verification  :
@@ -69,31 +67,28 @@ og_image                 : "og-card.png" # Open Graph/Twitter default site image
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : "Person" # Person or Organization (defaults to Person)
-  name                   : "Ali Ahad" # If the user or organization name differs from the site's name
+  name                   : "Usman Ahad" # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
-    - "https://scholar.google.com/citations?user=rcCCxyoAAAAJ"
-    - "https://orcid.org/0000-0002-3793-9180"
-    - "https://github.com/aliahad97"
-    - "https://www.linkedin.com/in/aliahad97"
+    - "https://github.com/usmanahad"
+    - "https://www.linkedin.com/in/usman-ahad"
 
-# google_analytics: G-5CKYZP273K
 # Analytics
 analytics:
-  provider               :  "google-analytics-4" # false (default), "google", "google-universal", "custom"
+  provider               : false # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : "G-5CKYZP273K"
+    tracking_id          :
 
 
 # Site Author
 author:
-  name             : "Ali Ahad"
+  name             : "Usman Ahad"
   avatar           : "profile.jpeg"
-  bio              : "Ph.D. in ECE"
-  location         : "College Park, MD"
+  bio              : "Computer Science student and AI researcher"
+  location         : "Lahore, Pakistan"
   employer         :
   pubmed           : 
-  googlescholar    :  https://scholar.google.com/citations?user=rcCCxyoAAAAJ #"http://yourfullgooglescholarurl.com"
-  email            :   ali.ahad.careers@gmail.com 
+  googlescholar    :
+  email            : "usman.ahad@lums.edu.pk"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -102,14 +97,14 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "aliahad97"
+  github           : "usmanahad"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "aliahad97"
-  orcid            : "http://orcid.org/0000-0002-3793-9180"
+  linkedin         : "usman-ahad"
+  orcid            :
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
@@ -262,7 +257,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Karachi # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins

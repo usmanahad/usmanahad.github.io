@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aliahad97.github.io/sitemap.xml
+Sitemap: https://usmanahad.github.io/sitemap.xml
