@@ -16,15 +16,19 @@ Developed a training-free framework that combines candidate-calibrated Self-Cert
 
 *Submitted to the NeurIPS 2026 VLM4RWD Workshop.*
 
-## Mind Your Own Business: Consent-Based Audio Privacy for Smart Glasses
+## PARDA: On-Device Audio Privacy for Smart Glasses using Small Language Models
 
 **Jan. 2026 -- Sep. 2026**
 
-*PyTorch, Qwen3.5-2B, LoRA, DPO, RAG, LS-EEND, Speech Processing*
+*PyTorch, ONNX, Qwen3.5-2B, LoRA, DPO, RAG, LS-EEND, Moonshine, Raspberry Pi 5*
 
-Built a paced, semi-real-time Raspberry Pi 5 pipeline that diarizes and transcribes speech, tracks cumulative disclosures across rolling windows, anonymizes linked identifiers, resynthesizes speaker-independent audio, and gates restoration on bystander consent. Distilled GPT-5.6 Luna anonymization into Qwen3.5-2B using 30,960 SFT examples and 6,241 DPO preference pairs. The DPO model reduced leakage by **24.7%** versus the 2B base model while increasing utility by 2.5 points; it remained within 6.5% of GPT-5.6 Luna's leakage while exceeding its utility by 1.4 points.
+Developed PARDA (Privacy-preserving Audio Redaction with Decryption on Authorization), an on-device system that protects both what a bystander says and how they sound. The Raspberry Pi 5 pipeline combines causal multi-speaker diarization and transcription, persistent disclosure profiles with cross-window retrieval, semantic anonymization, non-source speech resynthesis, and consent-mediated restoration.
 
-*Submitted to PerCom 2026.*
+Using 717 silver-labeled CANDOR conversations, distilled a GPT-5.6 Luna adversary-anonymizer pipeline into Qwen3.5-2B with 30,960 SFT examples and 6,241 DPO preference pairs. On 143 held-out conversations, DPO reduced mean leakage by **24.7%** (0.502 to 0.378) while improving utility from 0.875 to 0.900; the Q4 deployment achieved 0.400 leakage and 0.902 utility.
+
+On Raspberry Pi 5, the audio path achieved a **0.7703 speaker-mixture-weighted real-time factor**. Across 40 paced end-to-end replays, mean transcription delay was 23.56 seconds and post-recording anonymization drain averaged 6.43 minutes for 31.07-minute recordings. Non-source resynthesis pushed original-to-anonymized speaker-verification EER to 48.50--50.75% across three attackers, approaching chance-level linkability.
+
+*Submitted to IEEE PerCom.*
 
 ## FedCPR: Federated Open-Set Recognition with Latent Prototype Rejection
 

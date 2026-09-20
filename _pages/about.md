@@ -18,7 +18,7 @@ My research explores model training and efficient AI systems, especially *vision
 
 - **Aug. 2026:** Began serving as a Teaching Assistant for **AI on Edge Devices** at LUMS.
 - **Sep. 2026:** Submitted **VisConf**, a training-free quality-aware consensus framework for Best-of-N VLM reasoning, to the **NeurIPS 2026 VLM4RWD Workshop**.
-- **Sep. 2026:** Submitted **Mind Your Own Business**, a consent-based audio privacy pipeline for smart glasses, to **PerCom 2026**.
+- **Sep. 2026:** Submitted **PARDA**, an on-device audio privacy system for smart glasses using small language models, to **IEEE PerCom**.
 
 ## Selected research
 
@@ -28,11 +28,11 @@ Developed a training-free selection framework that combines candidate-calibrated
 
 *Submitted to the NeurIPS 2026 VLM4RWD Workshop.*
 
-### Mind Your Own Business: Consent-Based Audio Privacy for Smart Glasses
+### PARDA: On-Device Audio Privacy for Smart Glasses using Small Language Models
 
-Built a semi-real-time Raspberry Pi 5 pipeline for speaker diarization, streaming transcription, cross-window disclosure tracking, speech anonymization, and consent-gated restoration. A DPO-tuned Qwen3.5-2B model reduced privacy leakage by **24.7%** versus the base model while improving utility by 2.5 points on 143 held-out transcripts; the Q4 edge variant retained 0.902 utility.
+Built a Raspberry Pi 5 pipeline combining causal multi-speaker transcription, cross-window privacy reasoning, semantic anonymization, and non-source speech resynthesis. Distilling an adversary-anonymizer pipeline into Qwen3.5-2B reduced privacy leakage by **24.7%** while raising utility from 0.875 to 0.900 on 143 held-out conversations; the Q4 deployment retained 0.902 utility, and the audio path achieved a **0.7703 weighted real-time factor** across speaker mixtures.
 
-*Submitted to PerCom 2026.*
+*Submitted to IEEE PerCom.*
 
 ### FedCPR: Federated Open-Set Recognition with Latent Prototype Rejection
 
