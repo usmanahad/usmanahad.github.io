@@ -30,13 +30,15 @@ On Raspberry Pi 5, the audio path achieved a **0.7703 speaker-mixture-weighted r
 
 *Submitted to IEEE PerCom.*
 
-## FedCPR: Federated Open-Set Recognition with Latent Prototype Rejection
+## FedCPR: Contrastive Learning with Prototype Rejection for Federated Open Set Recognition
 
 **Nov. 2025 -- Feb. 2026**
 
-*PyTorch, Federated Learning, Open-Set Recognition*
+*PyTorch, FedAvg, Supervised Contrastive Learning, Latent Prototype Rejection, Energy-Based OOD Detection*
 
-Developed latent-space outlier synthesis with curriculum learning under FedAvg for heterogeneous clients. FedCPR reached **85.42% open-set AUROC** and **90.96% closed-set accuracy** on CIFAR-10 across five non-IID clients, outperforming evaluated alternatives including PROSER, FedPD, and ARPL.
+Developed FedCPR for federated open-set recognition without access to real outliers. Each client combines supervised contrastive learning with curriculum-based Latent Prototype Rejection, progressively applying jigsaw, flip, and rotation transformations to intermediate feature maps to create pseudo-open samples. A KL-divergence objective reserves low-density regions around class prototypes for unseen classes, while energy-based scoring detects unknown inputs at inference. The method retains standard FedAvg aggregation and introduces no additional communication payloads.
+
+On CIFAR-10 with 6 known and 4 unknown classes across 5 clients, FedCPR achieved **85.42 ± 4.02% open-set AUROC** and **90.96 ± 2.82% closed-set accuracy**. It exceeded PROSER and FedPD by 4.65 and 4.84 AUROC points, respectively. In ablation, removing LPR reduced AUROC from 89.89% to 82.88%, a **7.01-point drop**, while latent perturbations outperformed image-space augmentation by 0.89 points.
 
 ## WatchTower: Transformer-Based Network Anomaly Detection for Edge Devices
 

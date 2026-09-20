@@ -34,9 +34,9 @@ Built a Raspberry Pi 5 pipeline combining causal multi-speaker transcription, cr
 
 *Submitted to IEEE PerCom.*
 
-### FedCPR: Federated Open-Set Recognition with Latent Prototype Rejection
+### FedCPR: Contrastive Learning with Prototype Rejection for Federated Open Set Recognition
 
-Developed latent-space outlier synthesis with curriculum learning under FedAvg, achieving **85.42% open-set AUROC** and **90.96% closed-set accuracy** on CIFAR-10 across five non-IID clients while outperforming PROSER, FedPD, and ARPL.
+Combined supervised contrastive learning with curriculum-based Latent Prototype Rejection and energy-based unknown detection under standard FedAvg. On CIFAR-10 with 6 known and 4 unknown classes across 5 clients, FedCPR achieved **85.42% open-set AUROC** and **90.96% closed-set accuracy**, exceeding PROSER and FedPD by 4.65 and 4.84 AUROC points; removing LPR reduced AUROC by 7.01 points in ablation.
 
 ### WatchTower: Network Anomaly Detection for Edge Devices
 

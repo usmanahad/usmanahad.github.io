@@ -18,7 +18,7 @@ Research
 ======
 * Jan. 2026 -- Sep. 2026: VisConf — quality-aware consensus for Best-of-N VLM reasoning
 * Jan. 2026 -- Sep. 2026: PARDA — on-device audio privacy for smart glasses using small language models
-* Nov. 2025 -- Feb. 2026: FedCPR — federated open-set recognition with latent prototype rejection
+* Nov. 2025 -- Feb. 2026: FedCPR — contrastive learning with prototype rejection for federated open-set recognition
 * Aug. 2025 -- Dec. 2025: WatchTower — Transformer-based network anomaly detection for edge devices
 
 Teaching experience
