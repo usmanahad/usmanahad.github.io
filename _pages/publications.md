@@ -14,7 +14,7 @@ author_profile: true
 
 Developed a training-free framework that combines candidate-calibrated Self-Certainty with visual-attention engagement and hyperparameter-free Rank-Weighted Consensus, improving VLM answer selection without external verifier or reward models. Across MathVista, MMMU-Pro, and MMStar, VisConf achieved **56.36% mean accuracy**, outperformed all baselines in **24 of 27** model-dataset-budget settings, and delivered gains up to 12.18 points when correct rollouts were present but outnumbered.
 
-*Submitted to the NeurIPS 2026 VLM4RWD Workshop.*
+*Accepted to the NeurIPS 2026 VLM4RWD Workshop.*
 
 ## PARDA: On-Device Audio Privacy for Smart Glasses using Small Language Models
 

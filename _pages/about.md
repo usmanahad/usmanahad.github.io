@@ -16,9 +16,9 @@ My research explores model training and efficient AI systems, especially *vision
 
 ## Current
 
-- **Aug. 2026:** Began serving as a Teaching Assistant for **AI on Edge Devices** at LUMS.
-- **Sep. 2026:** Submitted **VisConf**, a training-free quality-aware consensus framework for Best-of-N VLM reasoning, to the **NeurIPS 2026 VLM4RWD Workshop**.
+- **VisConf accepted:** The training-free quality-aware consensus framework for Best-of-N VLM reasoning was accepted to the **NeurIPS 2026 VLM4RWD Workshop**.
 - **Sep. 2026:** Submitted **PARDA**, an on-device audio privacy system for smart glasses using small language models, to **IEEE PerCom**.
+- **Aug. 2026:** Began serving as a Teaching Assistant for **AI on Edge Devices** at LUMS.
 
 ## Selected research
 
@@ -26,7 +26,7 @@ My research explores model training and efficient AI systems, especially *vision
 
 Developed a training-free selection framework that combines candidate-calibrated Self-Certainty, visual engagement, and Rank-Weighted Consensus. Across three VLMs, three benchmarks, and sampling budgets of 8, 16, and 32, VisConf achieved **56.36% mean accuracy**, led all baselines in **24 of 27 settings**, and exceeded Self-Consistency by 0.98 points.
 
-*Submitted to the NeurIPS 2026 VLM4RWD Workshop.*
+*Accepted to the NeurIPS 2026 VLM4RWD Workshop.*
 
 ### PARDA: On-Device Audio Privacy for Smart Glasses using Small Language Models
 
