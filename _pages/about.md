@@ -13,7 +13,7 @@ redirect_from:
 
 Hello! I am a B.S. Computer Science student at [Lahore University of Management Sciences](https://lums.edu.pk/) in Lahore, Punjab, Pakistan, with three consecutive years on the Dean's Honour List.
 
-I’m interested in understanding why models succeed or fail, then translating those insights into reliable systems that work beyond the lab. My work spans model training, vision-language reasoning, and privacy-preserving AI, with experience across efficient learning and edge deployment. More broadly, I’m drawn to AI safety and the questions behind model behavior: what models learn, how they reason, and where their limitations emerge.
+I’m interested in understanding why models succeed or fail, then translating those insights into reliable systems that work beyond the lab. My work spans model training, vision-language reasoning, and privacy-preserving AI, with experience across efficient learning and edge deployment. More broadly, I’m interested in how understanding model behavior can inform safer, more reliable AI systems: uncovering failure modes, recognizing uncertainty, and evaluating whether models behave as intended across different tasks and settings.
 
 <section class="home-current" aria-labelledby="current" markdown="1">
 
