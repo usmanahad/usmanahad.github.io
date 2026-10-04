@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+body { margin: 0; color: #24313d; background: #e5e8ec; font: 14px system-ui, sans-serif; }
+.paper-toolbar { position: absolute; top: 0; left: 0; right: 0; height: 52px; display: flex; align-items: center; gap: 9px; padding: 8px 12px; background: #fff; border-bottom: 1px solid #c5cbd1; z-index: 2; }
+.paper-toolbar button, .paper-toolbar input, .paper-toolbar select { height: 32px; border: 1px solid #bdc5cc; border-radius: 4px; background: #fff; color: inherit; font: inherit; }
+.paper-toolbar button { width: 30px; font-size: 24px; line-height: 1; cursor: pointer; }
+.paper-toolbar input { width: 52px; padding: 3px 5px; }
+.paper-toolbar select { margin-left: auto; max-width: 110px; padding: 3px; }
+.paper-toolbar a { color: #176b85; text-decoration: none; white-space: nowrap; }
+.paper-toolbar :focus-visible { outline: 3px solid #2385a3; outline-offset: 1px; }
+#viewerContainer { position: absolute; top: 52px; bottom: 0; left: 0; right: 0; overflow: auto; overscroll-behavior: contain; }
+#viewer-status { position: absolute; top: 70px; left: 12px; right: 12px; margin: 0; padding: 14px; background: #fff; text-align: center; border-radius: 4px; z-index: 1; }
+#viewer-status[hidden], [hidden] { display: none !important; }
+.no-script { position: relative; margin: 70px 12px 0; padding: 12px; background: #fff; }
+@media (max-width: 420px) {
+  .paper-toolbar { gap: 5px; padding: 8px 6px; font-size: 12px; }
+  .paper-toolbar label { display: none; }
+  .paper-toolbar input { width: 43px; }
+  .paper-toolbar button { width: 26px; }
+  .paper-toolbar select { max-width: 91px; }
+}

@@ -1,49 +1,24 @@
 ---
 layout: archive
-title: "Research"
+title: "Research projects"
 permalink: /research/
 author_profile: true
+research_styles: true
+excerpt: "Explore Usman Ahad's research in vision-language reasoning, audio privacy, federated learning, and efficient edge AI."
 ---
 
-{% include base_path %}
-## VisConf: Quality-Aware Consensus for Best-of-N VLM Reasoning
-
-**Jan. 2026 -- Sep. 2026**
-
-*PyTorch, Transformers, Qwen2.5-VL, InternVL3, Gemma 4*
-
-Developed a training-free framework that combines candidate-calibrated Self-Certainty with visual-attention engagement and hyperparameter-free Rank-Weighted Consensus, improving VLM answer selection without external verifier or reward models. Across MathVista, MMMU-Pro, and MMStar, VisConf achieved **56.36% mean accuracy**, outperformed all baselines in **24 of 27** model-dataset-budget settings, and delivered gains up to 12.18 points when correct rollouts were present but outnumbered.
-
-*Accepted to the NeurIPS 2026 VLM4RWD Workshop.*
-
-## PARDA: On-Device Audio Privacy for Smart Glasses using Small Language Models
-
-**Jan. 2026 -- Sep. 2026**
-
-*PyTorch, ONNX, Qwen3.5-2B, LoRA, DPO, RAG, LS-EEND, Moonshine, Raspberry Pi 5*
-
-Developed PARDA (Privacy-preserving Audio Redaction with Decryption on Authorization), an on-device system that protects both what a bystander says and how they sound. The Raspberry Pi 5 pipeline combines causal multi-speaker diarization and transcription, persistent disclosure profiles with cross-window retrieval, semantic anonymization, non-source speech resynthesis, and consent-mediated restoration.
-
-Using 717 silver-labeled CANDOR conversations, distilled a GPT-5.6 Luna adversary-anonymizer pipeline into Qwen3.5-2B with 30,960 SFT examples and 6,241 DPO preference pairs. On 143 held-out conversations, DPO reduced mean leakage by **24.7%** (0.502 to 0.378) while improving utility from 0.875 to 0.900; the Q4 deployment achieved 0.400 leakage and 0.902 utility.
-
-On Raspberry Pi 5, the audio path achieved a **0.7703 speaker-mixture-weighted real-time factor**. Across 40 paced end-to-end replays, mean transcription delay was 23.56 seconds and post-recording anonymization drain averaged 6.43 minutes for 31.07-minute recordings. Non-source resynthesis pushed original-to-anonymized speaker-verification EER to 48.50--50.75% across three attackers, approaching chance-level linkability.
-
-*Submitted to IEEE PerCom.*
-
-## FedCPR: Contrastive Learning with Prototype Rejection for Federated Open Set Recognition
-
-**Nov. 2025 -- Feb. 2026**
-
-*PyTorch, FedAvg, Supervised Contrastive Learning, Latent Prototype Rejection, Energy-Based OOD Detection*
-
-Developed FedCPR for federated open-set recognition without access to real outliers. Each client combines supervised contrastive learning with curriculum-based Latent Prototype Rejection, progressively applying jigsaw, flip, and rotation transformations to intermediate feature maps to create pseudo-open samples. A KL-divergence objective reserves low-density regions around class prototypes for unseen classes, while energy-based scoring detects unknown inputs at inference. The method retains standard FedAvg aggregation and introduces no additional communication payloads.
-
-On CIFAR-10 with 6 known and 4 unknown classes across 5 clients, FedCPR achieved **85.42 ± 4.02% open-set AUROC** and **90.96 ± 2.82% closed-set accuracy**. It exceeded PROSER and FedPD by 4.65 and 4.84 AUROC points, respectively. In ablation, removing LPR reduced AUROC from 89.89% to 82.88%, a **7.01-point drop**, while latent perturbations outperformed image-space augmentation by 0.89 points.
-
-## WatchTower: Transformer-Based Network Anomaly Detection for Edge Devices
-
-**Aug. 2025 -- Dec. 2025**
-
-*PyTorch, TFLite, Apache TVM, FedProx, PROSER, Raspberry Pi 5*
-
-Built a real-time open-set intrusion detector using 28 packet-level features, a memory-token Transformer with gated cross-window state, PROSER latent-space outliers, and FedProx. WatchTower achieved **93.66% accuracy** and **92.83% F1** on CIC-IDS2017 and was validated against live DoS traffic across 3--8 connected devices. INT8 quantization reduced the model from 4.63 MB to 1.51 MB, and 1,000-trial TVM auto-tuning reached 3.82 ms single-core latency, a 2.6x speedup.
+<div class="research-index">
+  <p class="research-intro">A selection of my research projects. Open a project for an overview, my contributions, and the full paper.</p>
+  <div class="research-grid">
+    {% for project in site.data.research %}
+    <a class="research-card" href="{{ project.url | relative_url }}">
+      <span class="research-card__topic">{{ project.topic }}</span>
+      <h2>{{ project.name }}</h2>
+      <p class="research-card__summary">{{ project.summary }}</p>
+      <span class="research-card__dates">{{ project.dates }}</span>
+      {% if project.status %}<span class="research-card__status">{{ project.status }}</span>{% endif %}
+      <span class="research-card__action">Explore project <span aria-hidden="true">&rarr;</span></span>
+    </a>
+    {% endfor %}
+  </div>
+</div>

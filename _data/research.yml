@@ -1,0 +1,99 @@
+- slug: visconf
+  name: VisConf
+  title: "Quality-Aware Consensus for Best-of-N in Vision-Language Model Reasoning"
+  url: /research/visconf/
+  topic: Vision-language reasoning
+  dates: Jan. 2026 – Sep. 2026
+  status: Accepted · NeurIPS 2026 VLM4RWD Workshop
+  summary: "Selecting better VLM answers by combining visual engagement, confidence, and consensus across sampled reasoning paths."
+  paper: /files/papers/visconf.pdf
+  pipeline:
+    image: /images/research/visconf-pipeline.png
+    alt: "VisConf pipeline: sample VLM rollouts, combine visual engagement with calibrated confidence, and aggregate answers with Rank-Weighted Consensus."
+    caption: "Pipeline overview: sampled reasoning paths are scored using visual engagement and calibrated confidence, then combined through Rank-Weighted Consensus. Figure 2 from the paper."
+  overview: |
+    Best-of-N reasoning samples several candidate answers before deciding which one to trust. For vision-language models, answer frequency and confidence alone can miss a crucial distinction: how much a reasoning path engages with the image. VisConf combines candidate-calibrated Self-Certainty with visual engagement to score each rollout, then uses a tuning-free Rank-Weighted Consensus rule to aggregate evidence across answers.
+
+    Across three VLMs on MathVista, MMMU-Pro, and MMStar, the framework achieved **56.36% mean accuracy** and outperformed all evaluated baselines in **24 of 27** model–dataset–budget settings. Its largest gains occur when correct reasoning paths exist but are outnumbered by incorrect candidates.
+  contributions:
+    - "Designed the experiments used to study rollout quality and compare answer-selection methods across models, benchmarks, and sampling budgets."
+    - "Identified the key confidence, visual-attention, and correctness metrics used in the analysis."
+    - "Analyzed the relationship between correctness and jointly high visual attention and high confidence, establishing the complementary value of the two signals."
+  figures:
+    - image: /images/research/visconf-confidence-attention.png
+      alt: "Heatmap of correctness by confidence and visual attention, alongside accuracy gaps for individual and combined quality signals."
+      caption: "Confidence and visual attention provide complementary evidence. Rollouts high in both signals reached 49.5% accuracy, compared with 43.4% when both were low, in the Qwen2.5-VL-3B analysis. The adjacent plot compares top-versus-bottom quartile accuracy gaps. Figure 1 from the paper."
+
+- slug: parda
+  name: PARDA
+  title: "On-Device Audio Privacy for Smart Glasses using Small Language Models"
+  url: /research/parda/
+  topic: Audio privacy & edge AI
+  dates: Jan. 2026 – Sep. 2026
+  status: Submitted · IEEE PerCom
+  summary: "Protecting bystanders' speech and acoustic identity through semantic anonymization and non-source speech synthesis."
+  paper: /files/papers/parda.pdf
+  pipeline:
+    image: /images/research/parda-pipeline.png
+    alt: "PARDA pipeline from audio capture through speaker diarization, transcription, semantic redaction, encrypted tracks, and non-source speech synthesis."
+    caption: "Pipeline overview and trust boundary: audio processing and semantic anonymization run on device; the companion phone synthesizes the anonymized speech. Figure 3 from the paper."
+  overview: |
+    Smart glasses can record bystanders who have not consented, exposing both their voice and private information inferred from seemingly ordinary statements. PARDA combines speaker-aware transcription, causal semantic anonymization, and non-source speech resynthesis. Bounded windows, persistent disclosure profiles, and retrieval of earlier evidence allow the system to reason about disclosures spread across conversation turns.
+
+    The adversary–anonymizer pipeline was distilled into Qwen3.5-2B using 717 silver-labeled CANDOR conversations. On 143 held-out conversations, preference training reduced mean privacy leakage from **0.502 to 0.378** while improving utility from **0.875 to 0.900**. The Q4 deployment achieved 0.400 leakage and 0.902 utility. On Raspberry Pi 5, the audio path reached a speaker-mixture-weighted real-time factor of 0.7703; concurrent end-to-end replays also measured the remaining transcription and anonymization delay.
+  contributions:
+    - "Built the complete small-language-model training pipeline, including teacher distillation, supervised fine-tuning, and Direct Preference Optimization."
+    - "Evaluated the SLM's privacy–utility tradeoff, including held-out performance and quantized deployment."
+    - "Selected and evaluated text-to-speech models for non-source resynthesis, assessing speech quality and acoustic privacy."
+    - "Fine-tuned the gender-detection classifier used for coarse voice-category selection."
+    - "Optimized the SLM for edge deployment, including quantization and the inference configuration on Raspberry Pi 5."
+  figures:
+    - image: /images/research/parda-privacy-utility.png
+      alt: "Box-and-violin plots comparing privacy leakage and utility for the GPT teacher, Qwen3.5-2B DPO, and three PII baselines on 143 held-out conversations."
+      caption: "Privacy and utility on 143 held-out conversations. The DPO-trained 2B SLM achieved 0.378 mean leakage versus the teacher's 0.355, while retaining higher utility (0.900 versus 0.886). Lower leakage and higher utility are better. Figure 10 from the paper."
+
+- slug: fedcpr
+  name: FedCPR
+  title: "Contrastive Learning with Prototype Rejection for Federated Open Set Recognition"
+  url: /research/fedcpr/
+  topic: Federated learning & recognition
+  dates: Nov. 2025 – Feb. 2026
+  summary: "Learning compact known-class representations and rejecting unseen classes through curriculum-based latent perturbations."
+  paper: /files/papers/fedcpr.pdf
+  pipeline:
+    image: /images/research/fedcpr-framework.png
+    alt: "FedCPR framework with client-local supervised contrastive learning, curriculum latent augmentation, Latent Prototype Rejection, and FedAvg aggregation."
+    caption: "Pipeline overview: each client combines classification, supervised contrastive learning, and Latent Prototype Rejection before standard FedAvg aggregation. Figure 1 from the paper."
+  overview: |
+    Federated models often assume that every class encountered at inference was seen during training. FedCPR addresses the open-set case by strengthening representations at each client. Supervised contrastive learning builds compact known-class clusters, while curriculum-based Latent Prototype Rejection creates pseudo-open examples by perturbing intermediate features with jigsaw, flip, and rotation transformations.
+
+    A KL-divergence term encourages uniform predictions for these perturbed features, reserving space for unknown classes. The approach uses standard FedAvg and energy-based detection without an additional communication payload. On CIFAR-10 with six known and four unknown classes across five clients, it achieved **85.42 ± 4.02% open-set AUROC** and **90.96 ± 2.82% closed-set accuracy**. Removing LPR reduced AUROC by 7.01 points in the ablation study.
+  contributions:
+    - "Identified the latent augmentation strategies—jigsaw, flip, and rotation—and investigated how they improve the representations learned for known classes."
+    - "Designed the curriculum component that progressively increases latent perturbation complexity during training."
+    - "Introduced the KL-to-uniform loss term used to train rejection of augmented latent samples."
+  figures:
+    - image: /images/research/fedcpr-latent-space.png
+      alt: "FedCPR t-SNE visualization showing known-class embeddings in blue and unknown samples in orange."
+      caption: "A qualitative view of the learned feature space: known classes form compact groups, while unknown examples occupy different regions. This t-SNE visualization illustrates the representations; open-set performance is measured separately with AUROC. Figure 2 from the paper."
+
+- slug: watchtower
+  name: WatchTower
+  title: "A Transformer-Based Open-Set Network Anomaly Detection System for Edge Devices"
+  url: /research/watchtower/
+  topic: Network security & edge deployment
+  dates: Aug. 2025 – Dec. 2025
+  summary: "Detecting network attacks in real time with a Transformer optimized for Raspberry Pi 5."
+  paper: /files/papers/watchtower.pdf
+  overview: |
+    WatchTower is a Transformer-based network anomaly detector designed for Raspberry Pi 5. It processes 28 packet-level features and uses memory tokens with a gated state update to retain context across windows. PROSER supplies synthetic latent outliers during training, while FedProx supports learning across heterogeneous network traffic.
+
+    The model achieved **93.66% accuracy** and **92.83% F1** on CIC-IDS2017 and was also evaluated against live DoS traffic. INT8 quantization reduced model size from 4.63 MB to 1.51 MB, and 1,000-trial TVM auto-tuning brought single-core latency to **3.82 ms**, enabling more than 260 packets per second. The live detection plot below shows the deployed model crossing the anomaly threshold during an attack.
+  contributions:
+    - "Created the Transformer model and trained it from scratch, including the packet-feature representation and memory mechanism."
+    - "Added PROSER to the training pipeline to generate latent outliers for open-set anomaly detection."
+    - "Optimized edge inference through INT8 quantization and hardware-aware TVM auto-tuning for Raspberry Pi 5."
+  figures:
+    - image: /images/research/watchtower-live-detection.png
+      alt: "Live anomaly predictions remain mostly below a 0.5 threshold before and after a DoS attack, and rise above 0.9 during the attack."
+      caption: "Live anomaly detection with the optimized model. Confidence crosses the 0.5 decision threshold near window 95, remains high during the attack, and drops after the attack ends."

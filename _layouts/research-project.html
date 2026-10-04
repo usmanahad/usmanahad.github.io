@@ -1,0 +1,64 @@
+---
+layout: default
+---
+{% assign project = site.data.research | where: 'slug', page.project | first %}
+<main id="main" class="research-project" aria-labelledby="project-title">
+  <a class="project-back" href="{{ '/research/' | relative_url }}"><span aria-hidden="true">&larr;</span> All research projects</a>
+  <header class="project-header">
+    <p class="project-topic">{{ project.topic }}</p>
+    <h1 id="project-title">{{ project.name }}</h1>
+    <p class="project-subtitle">{{ project.title }}</p>
+    <div class="project-meta">
+      <span>{{ project.dates }}</span>
+      {% if project.status %}<span class="project-status">{{ project.status }}</span>{% endif %}
+    </div>
+    <nav class="project-section-nav" aria-label="Project sections">
+      <a href="#overview">Overview</a>
+      <a href="#contributions">My contributions</a>
+      <a href="#paper">Read the paper</a>
+    </nav>
+  </header>
+
+  {% if project.pipeline %}
+  <figure class="project-figure project-figure--pipeline">
+    <a href="{{ project.pipeline.image | relative_url }}" target="_blank" rel="noopener" aria-label="Open {{ project.name }} pipeline image at full size">
+      <img src="{{ project.pipeline.image | relative_url }}" alt="{{ project.pipeline.alt | escape }}" decoding="async">
+    </a>
+    <figcaption>{{ project.pipeline.caption }}</figcaption>
+  </figure>
+  {% endif %}
+
+  <section id="overview" class="project-section" aria-labelledby="overview-heading">
+    <h2 id="overview-heading">Overview</h2>
+    {{ project.overview | markdownify }}
+  </section>
+
+  <section id="contributions" class="project-section" aria-labelledby="contributions-heading">
+    <h2 id="contributions-heading">My contributions</h2>
+    <ul class="project-contributions">
+      {% for contribution in project.contributions %}<li>{{ contribution }}</li>{% endfor %}
+    </ul>
+    {% for figure in project.figures %}
+    <figure class="project-figure">
+      <a href="{{ figure.image | relative_url }}" target="_blank" rel="noopener" aria-label="Open {{ project.name }} result image at full size">
+        <img src="{{ figure.image | relative_url }}" alt="{{ figure.alt | escape }}" loading="lazy" decoding="async">
+      </a>
+      <figcaption>{{ figure.caption }}</figcaption>
+    </figure>
+    {% endfor %}
+  </section>
+
+  <section id="paper" class="project-section" aria-labelledby="paper-heading">
+    <div class="project-paper-heading">
+      <h2 id="paper-heading">Full paper</h2>
+      <div class="project-paper-actions">
+        <a href="{{ project.paper | relative_url }}" target="_blank" rel="noopener">Open PDF <span aria-hidden="true">&nearr;</span></a>
+        <a href="{{ project.paper | relative_url }}" download>Download</a>
+      </div>
+    </div>
+    <p class="project-paper-hint">Scroll within the viewer to read the complete paper. Use the controls to change pages or zoom.</p>
+    <iframe class="project-paper-viewer" src="{{ '/assets/pdf-viewer/viewer.html' | relative_url }}?file={{ project.paper | relative_url | url_encode }}&amp;title={{ project.name | url_encode }}" title="{{ project.name }} full paper PDF viewer" loading="lazy" allowfullscreen></iframe>
+    <noscript><p>To read the paper without JavaScript, <a href="{{ project.paper | relative_url }}">open the PDF directly</a>.</p></noscript>
+  </section>
+  <a class="project-back project-back--bottom" href="{{ '/research/' | relative_url }}"><span aria-hidden="true">&larr;</span> All research projects</a>
+</main>

@@ -1,0 +1,50 @@
+.research-intro { max-width: 42rem; color: var(--light-text-color); margin: 0 0 2rem; }
+.research-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.research-card { display: flex; flex-direction: column; padding: 1.5rem; border: 1px solid var(--light-text-color); border-radius: 12px; color: var(--main-text-color); text-decoration: none; background: var(--main-background-color); transition: border-color .15s, box-shadow .15s; }
+.research-card:hover { color: var(--main-text-color); text-decoration: none; border-color: #52adc8; box-shadow: 0 4px 18px rgba(0,0,0,.08); }
+.research-card:focus-visible, .research-project a:focus-visible { outline: 3px solid #52adc8; outline-offset: 4px; }
+.research-card__topic, .project-topic { font-size: .72rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--light-text-color); }
+.research-card h2 { margin: .6rem 0 .65rem; padding: 0; border: 0; font-size: 1.45rem; }
+.research-card__summary { margin: 0 0 1.5rem; line-height: 1.55; font-size: .85rem; flex: 1; }
+.research-card__dates { color: var(--light-text-color); font-size: .73rem; }
+.research-card__status { font-size: .72rem; margin-top: .4rem; line-height: 1.5; }
+.research-card__action { margin-top: 1.1rem; font-size: .8rem; font-weight: 600; color: #2385a3; }
+.research-card__action span { margin-left: .3rem; }
+#main.research-project { max-width: 1040px; margin: 2rem auto; padding: 0 1.25rem; }
+.project-back { display: inline-block; font-size: .8rem; text-decoration: none; margin-bottom: 2rem; }
+.project-header { margin-bottom: 2rem; }
+.project-topic { margin-bottom: .5rem; }
+.project-header h1 { margin: 0 0 .5rem; font-size: 2.7rem; letter-spacing: -.035em; line-height: 1.1; }
+.project-subtitle { max-width: 48rem; margin: 0 0 1.25rem; font-size: 1.2rem; line-height: 1.4; }
+.project-meta { display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; color: var(--light-text-color); font-size: .8rem; }
+.project-status { color: var(--main-text-color); }
+.project-section-nav { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--light-text-color); font-size: .8rem; }
+.project-section-nav a { text-decoration: none; }
+.project-section { margin-top: 2.5rem; scroll-margin-top: 1.5rem; }
+.project-section h2 { margin: 0 0 1rem; font-size: 1.35rem; }
+.project-section p, .project-contributions { font-size: .9rem; line-height: 1.7; }
+.project-contributions { padding-left: 1.25rem; }
+.project-contributions li { margin-bottom: .65rem; padding-left: .25rem; }
+.project-figure { display: block; margin: 1.75rem 0 0; width: 100%; }
+.project-figure a { display: block; background: #fff; padding: .8rem; border-radius: 8px; border: 1px solid #d9dee2; }
+.project-figure img { display: block; width: 100%; height: auto; margin: 0 auto; }
+.project-figure figcaption { display: block; width: 100%; margin-top: .7rem; color: var(--light-text-color); font-size: .73rem; line-height: 1.6; }
+.project-figure--pipeline { margin-top: 0; }
+.project-paper-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: .75rem; }
+.project-paper-heading h2 { margin-bottom: .5rem; }
+.project-paper-actions { display: flex; gap: 1rem; font-size: .8rem; }
+.project-paper-hint { color: var(--light-text-color); font-size: .75rem !important; }
+.project-paper-viewer { display: block; width: 100%; height: 780px; height: min(80vh, 900px); min-height: 460px; border: 1px solid #c5cbd1; border-radius: 8px; background: #edf0f3; }
+.project-back--bottom { margin: 2rem 0 0; }
+@media (max-width: 600px) {
+  .research-grid { grid-template-columns: 1fr; }
+  .research-card { padding: 1.25rem; }
+  #main.research-project { padding: 0 1rem; margin-top: 1.5rem; }
+  .project-header h1 { font-size: 2.15rem; }
+  .project-subtitle { font-size: 1rem; }
+  .project-figure a { padding: .35rem; }
+  .project-paper-viewer { min-height: 430px; height: 70vh; }
+}
+@media print {
+  .project-paper-viewer, .project-section-nav { display: none; }
+}
