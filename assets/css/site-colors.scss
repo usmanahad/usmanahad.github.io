@@ -1,0 +1,9 @@
+---
+---
+@import "vendor/breakpoint/breakpoint";
+@import "variables";
+
+:root {
+  --site-accent-color: #{$link-color};
+  --site-accent-hover-color: #{$link-color-hover};
+}

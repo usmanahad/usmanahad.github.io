@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "Usman Ahad"
-excerpt: "Usman Ahad is a Computer Science student at LUMS researching efficient multimodal reasoning, privacy-preserving edge AI, and federated open-set learning."
+excerpt: "Usman Ahad is a Computer Science student at LUMS interested in AI safety, understanding how models work, and building useful, privacy-preserving AI systems."
 author_profile: true
 home_styles: true
 redirect_from: 
@@ -13,7 +13,7 @@ redirect_from:
 
 Hello! I am a B.S. Computer Science student at [Lahore University of Management Sciences](https://lums.edu.pk/) in Lahore, Punjab, Pakistan, with three consecutive years on the Dean's Honour List.
 
-My research explores model training and efficient AI systems, especially *vision-language reasoning*, *privacy-preserving edge AI*, and *federated learning*. I’m interested in understanding why models succeed or fail, then translating those insights into reliable systems that work beyond the lab.
+I want to build AI that helps people—and understand it well enough to know when it shouldn’t be trusted. I’m drawn to AI safety and the questions under the hood: how models learn, what drives their predictions, and why they fail. My work in model training, vision-language reasoning, and privacy-preserving AI is a way of exploring those questions and turning the answers into safer, more useful systems.
 
 <section class="home-current" aria-labelledby="current" markdown="1">
 
