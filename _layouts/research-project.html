@@ -57,7 +57,7 @@ layout: default
       </div>
     </div>
     <p class="project-paper-hint">Scroll within the viewer to read the complete paper. Use the controls to change pages or zoom.</p>
-    <iframe class="project-paper-viewer" src="{{ '/assets/pdf-viewer/viewer.html' | relative_url }}?file={{ project.paper | relative_url | url_encode }}&amp;title={{ project.name | url_encode }}" title="{{ project.name }} full paper PDF viewer" loading="lazy" allowfullscreen></iframe>
+    <iframe class="project-paper-viewer" src="{{ '/assets/pdf-viewer/viewer.html' | relative_url }}?v=safari-1&amp;file={{ project.paper | relative_url | url_encode }}&amp;title={{ project.name | url_encode }}" title="{{ project.name }} full paper PDF viewer" loading="lazy" allowfullscreen></iframe>
     <noscript><p>To read the paper without JavaScript, <a href="{{ project.paper | relative_url }}">open the PDF directly</a>.</p></noscript>
   </section>
   <a class="project-back project-back--bottom" href="{{ '/research/' | relative_url }}"><span aria-hidden="true">&larr;</span> All research projects</a>

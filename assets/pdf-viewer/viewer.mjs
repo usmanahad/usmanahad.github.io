@@ -1,6 +1,3 @@
-import * as pdfjsLib from "./vendor/pdf.mjs";
-import { EventBus, PDFLinkService, PDFViewer } from "./vendor/pdf_viewer.mjs";
-
 const container = document.getElementById("viewerContainer");
 const status = document.getElementById("viewer-status");
 const pageNumber = document.getElementById("page-number");
@@ -19,7 +16,11 @@ try {
   document.title = `${params.get("title") || "Research"} — full paper`;
   openPdf.href = file.href;
   openPdf.hidden = false;
-  pdfjsLib.GlobalWorkerOptions.workerSrc = new URL("./vendor/pdf.worker.mjs", import.meta.url).href;
+  // Import inside the error boundary so even module-loading failures leave a
+  // usable Open PDF link. The legacy build supplies Safari's missing APIs.
+  const pdfjsLib = await import("./vendor/pdf.mjs?v=safari-1");
+  const { EventBus, PDFLinkService, PDFViewer } = await import("./vendor/pdf_viewer.mjs?v=safari-1");
+  pdfjsLib.GlobalWorkerOptions.workerSrc = new URL("./vendor/pdf.worker.mjs?v=safari-1", import.meta.url).href;
 
   const eventBus = new EventBus();
   const linkService = new PDFLinkService({ eventBus, externalLinkTarget: 2, externalLinkRel: "noopener noreferrer" });
@@ -46,7 +47,10 @@ try {
     updateControls();
   });
   eventBus.on("pagechanging", updateControls);
-  eventBus.on("pagerendered", () => { status.hidden = true; });
+  eventBus.on("pagerendered", ({ error }) => {
+    status.hidden = !error;
+    if (error) status.textContent = "This page could not render. Use Open PDF to read the paper in your browser.";
+  });
   previous.addEventListener("click", () => { viewer.currentPageNumber -= 1; });
   next.addEventListener("click", () => { viewer.currentPageNumber += 1; });
   pageNumber.addEventListener("change", () => {
