@@ -22,7 +22,7 @@ layout: default
   {% if project.pipeline %}
   <figure class="project-figure project-figure--pipeline">
     <a href="{{ project.pipeline.image | relative_url }}" target="_blank" rel="noopener" aria-label="Open {{ project.name }} pipeline image at full size">
-      <img src="{{ project.pipeline.image | relative_url }}" alt="{{ project.pipeline.alt | escape }}" decoding="async">
+      <img src="{{ project.pipeline.image | relative_url }}" alt="{{ project.pipeline.alt | escape }}" width="{{ project.pipeline.width }}" height="{{ project.pipeline.height }}" decoding="async">
     </a>
     <figcaption>{{ project.pipeline.caption }}</figcaption>
   </figure>
@@ -38,14 +38,16 @@ layout: default
     <ul class="project-contributions">
       {% for contribution in project.contributions %}<li>{{ contribution }}</li>{% endfor %}
     </ul>
+    <div class="project-figures{% if project.figures.size > 1 %} project-figures--paired{% endif %}">
     {% for figure in project.figures %}
     <figure class="project-figure">
       <a href="{{ figure.image | relative_url }}" target="_blank" rel="noopener" aria-label="Open {{ project.name }} result image at full size">
-        <img src="{{ figure.image | relative_url }}" alt="{{ figure.alt | escape }}" loading="lazy" decoding="async">
+        <img src="{{ figure.image | relative_url }}" alt="{{ figure.alt | escape }}" width="{{ figure.width }}" height="{{ figure.height }}" loading="lazy" decoding="async">
       </a>
       <figcaption>{{ figure.caption }}</figcaption>
     </figure>
     {% endfor %}
+    </div>
   </section>
 
   <section id="paper" class="project-section" aria-labelledby="paper-heading">
@@ -57,7 +59,7 @@ layout: default
       </div>
     </div>
     <p class="project-paper-hint">Scroll within the viewer to read the complete paper. Use the controls to change pages or zoom.</p>
-    <iframe class="project-paper-viewer" src="{{ '/assets/pdf-viewer/viewer.html' | relative_url }}?v=safari-1&amp;file={{ project.paper | relative_url | url_encode }}&amp;title={{ project.name | url_encode }}" title="{{ project.name }} full paper PDF viewer" loading="lazy" allowfullscreen></iframe>
+    <iframe class="project-paper-viewer" src="{{ '/assets/pdf-viewer/viewer.html' | relative_url }}?v=projects-1&amp;file={{ project.paper | relative_url | url_encode }}&amp;title={{ project.name | url_encode }}" title="{{ project.name }} full paper PDF viewer" loading="lazy" allowfullscreen></iframe>
     <noscript><p>To read the paper without JavaScript, <a href="{{ project.paper | relative_url }}">open the PDF directly</a>.</p></noscript>
   </section>
   <a class="project-back project-back--bottom" href="{{ '/research/' | relative_url }}"><span aria-hidden="true">&larr;</span> All research projects</a>

@@ -3,6 +3,7 @@ permalink: /
 title: "Usman Ahad"
 excerpt: "Usman Ahad is a Computer Science student at LUMS researching efficient multimodal reasoning, privacy-preserving edge AI, and federated open-set learning."
 author_profile: true
+home_styles: true
 redirect_from: 
   - /about/
   - /about.html
@@ -14,11 +15,15 @@ Hello! I am a B.S. Computer Science student at [Lahore University of Management 
 
 My research explores model training and efficient AI systems, especially *vision-language reasoning*, *privacy-preserving edge AI*, and *federated learning*. I’m interested in understanding why models succeed or fail, then translating those insights into reliable systems that work beyond the lab.
 
+<section class="home-current" aria-labelledby="current" markdown="1">
+
 ## Current
 
-- **VisConf accepted:** The training-free quality-aware consensus framework for Best-of-N VLM reasoning was accepted to the **NeurIPS 2026 VLM4RWD Workshop**.
+- 🎉 **[VisConf accepted](/research/visconf/):** The training-free quality-aware consensus framework for Best-of-N VLM reasoning was accepted to the **NeurIPS 2026 VLM4RWD Workshop**.
 - **Sep. 2026:** Submitted **PARDA**, an on-device audio privacy system for smart glasses using small language models, to **IEEE PerCom**.
 - **Aug. 2026:** Began serving as a Teaching Assistant for **AI on Edge Devices** at LUMS.
+
+</section>
 
 ## Selected research
 

@@ -4,6 +4,6 @@ The viewer uses the **legacy/compatibility build of PDF.js 5.6.205**, vendored f
 
 The library and its assets are served from this repository; no CDN is required to read a paper. See vendor/LICENSE for the Apache 2.0 license. Versioned URLs prevent previously cached modern modules from being reused. Imports run inside the error boundary, so Open PDF remains available if loading or rendering fails.
 
-viewer.html?file=/files/papers/visconf.pdf&title=VisConf opens a same-origin paper with continuous scrolling, selectable text, page navigation, and zoom. Only PDF paths under files/papers are accepted.
+viewer.html?file=/Projects/VisConf/VisConf.pdf&title=VisConf opens a same-origin paper with continuous scrolling, selectable text, page navigation, and zoom. The four configured Projects paper paths are accepted. Earlier links under files/papers remain supported.
 
-Project content, contributions, and image paths are in _data/research.yml. Replace the screenshots in images/research with higher-quality images using the same filenames, or update those paths.
+Project content, contributions, and image paths are in _data/research.yml. PDFs and original figures are in Projects, mirrored from the sibling UniversityApplications/Projects source folder. See Projects/README.md for the update workflow. Earlier screenshot assets remain available for existing direct links.

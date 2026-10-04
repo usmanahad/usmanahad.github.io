@@ -6,9 +6,11 @@
   dates: Jan. 2026 – Sep. 2026
   status: Accepted · NeurIPS 2026 VLM4RWD Workshop
   summary: "Selecting better VLM answers by combining visual engagement, confidence, and consensus across sampled reasoning paths."
-  paper: /files/papers/visconf.pdf
+  paper: /Projects/VisConf/VisConf.pdf
   pipeline:
-    image: /images/research/visconf-pipeline.png
+    image: /Projects/VisConf/main-method-diagram.png
+    width: 3112
+    height: 1400
     alt: "VisConf pipeline: sample VLM rollouts, combine visual engagement with calibrated confidence, and aggregate answers with Rank-Weighted Consensus."
     caption: "Pipeline overview: sampled reasoning paths are scored using visual engagement and calibrated confidence, then combined through Rank-Weighted Consensus. Figure 2 from the paper."
   overview: |
@@ -20,9 +22,11 @@
     - "Identified the key confidence, visual-attention, and correctness metrics used in the analysis."
     - "Analyzed the relationship between correctness and jointly high visual attention and high confidence, establishing the complementary value of the two signals."
   figures:
-    - image: /images/research/visconf-confidence-attention.png
-      alt: "Heatmap of correctness by confidence and visual attention, alongside accuracy gaps for individual and combined quality signals."
-      caption: "Confidence and visual attention provide complementary evidence. Rollouts high in both signals reached 49.5% accuracy, compared with 43.4% when both were low, in the Qwen2.5-VL-3B analysis. The adjacent plot compares top-versus-bottom quartile accuracy gaps. Figure 1 from the paper."
+    - image: /Projects/VisConf/qwen-accuracy-landscape-heatmap.png
+      width: 2281
+      height: 1987
+      alt: "Accuracy heatmap by confidence and visual attention: both high 49.5%, high attention only 48.3%, high confidence only 47.9%, and both low 43.4%."
+      caption: "Confidence and visual attention provide complementary evidence. Rollouts high in both signals reached 49.5% accuracy, compared with 43.4% when both were low, in the Qwen2.5-VL-3B analysis. Heatmap from Figure 1."
 
 - slug: parda
   name: PARDA
@@ -32,9 +36,11 @@
   dates: Jan. 2026 – Sep. 2026
   status: Submitted · IEEE PerCom
   summary: "Protecting bystanders' speech and acoustic identity through semantic anonymization and non-source speech synthesis."
-  paper: /files/papers/parda.pdf
+  paper: /Projects/PARDA/PARDA.pdf
   pipeline:
-    image: /images/research/parda-pipeline.png
+    image: /Projects/PARDA/pipeline-diagram-v2.png
+    width: 1920
+    height: 533
     alt: "PARDA pipeline from audio capture through speaker diarization, transcription, semantic redaction, encrypted tracks, and non-source speech synthesis."
     caption: "Pipeline overview and trust boundary: audio processing and semantic anonymization run on device; the companion phone synthesizes the anonymized speech. Figure 3 from the paper."
   overview: |
@@ -48,9 +54,16 @@
     - "Fine-tuned the gender-detection classifier used for coarse voice-category selection."
     - "Optimized the SLM for edge deployment, including quantization and the inference configuration on Raspberry Pi 5."
   figures:
-    - image: /images/research/parda-privacy-utility.png
-      alt: "Box-and-violin plots comparing privacy leakage and utility for the GPT teacher, Qwen3.5-2B DPO, and three PII baselines on 143 held-out conversations."
-      caption: "Privacy and utility on 143 held-out conversations. The DPO-trained 2B SLM achieved 0.378 mean leakage versus the teacher's 0.355, while retaining higher utility (0.900 versus 0.886). Lower leakage and higher utility are better. Figure 10 from the paper."
+    - image: /Projects/PARDA/pii_leakage.png
+      width: 3074
+      height: 1779
+      alt: "Privacy leakage box-and-violin plot comparing the GPT teacher, Qwen3.5-2B DPO, and three PII baselines on 143 held-out conversations."
+      caption: "Privacy leakage on 143 held-out conversations. The DPO-trained 2B SLM achieved 0.378 mean leakage versus the teacher's 0.355. Lower is better. Figure 10(a)."
+    - image: /Projects/PARDA/pii_utility.png
+      width: 3074
+      height: 1775
+      alt: "Utility box-and-violin plot comparing the GPT teacher, Qwen3.5-2B DPO, and three PII baselines on 143 held-out conversations."
+      caption: "The DPO-trained 2B SLM retained higher mean utility than the teacher (0.900 versus 0.886). Higher is better. Figure 10(b)."
 
 - slug: fedcpr
   name: FedCPR
@@ -59,9 +72,11 @@
   topic: Federated learning & recognition
   dates: Nov. 2025 – Feb. 2026
   summary: "Learning compact known-class representations and rejecting unseen classes through curriculum-based latent perturbations."
-  paper: /files/papers/fedcpr.pdf
+  paper: /Projects/FedCPR/FedCPR.pdf
   pipeline:
-    image: /images/research/fedcpr-framework.png
+    image: /Projects/FedCPR/FedCPR.png
+    width: 3064
+    height: 1562
     alt: "FedCPR framework with client-local supervised contrastive learning, curriculum latent augmentation, Latent Prototype Rejection, and FedAvg aggregation."
     caption: "Pipeline overview: each client combines classification, supervised contrastive learning, and Latent Prototype Rejection before standard FedAvg aggregation. Figure 1 from the paper."
   overview: |
@@ -73,7 +88,9 @@
     - "Designed the curriculum component that progressively increases latent perturbation complexity during training."
     - "Introduced the KL-to-uniform loss term used to train rejection of augmented latent samples."
   figures:
-    - image: /images/research/fedcpr-latent-space.png
+    - image: /Projects/FedCPR/tsne_49.jpeg
+      width: 1328
+      height: 1067
       alt: "FedCPR t-SNE visualization showing known-class embeddings in blue and unknown samples in orange."
       caption: "A qualitative view of the learned feature space: known classes form compact groups, while unknown examples occupy different regions. This t-SNE visualization illustrates the representations; open-set performance is measured separately with AUROC. Figure 2 from the paper."
 
@@ -84,7 +101,7 @@
   topic: Network security & edge deployment
   dates: Aug. 2025 – Dec. 2025
   summary: "Detecting network attacks in real time with a Transformer optimized for Raspberry Pi 5."
-  paper: /files/papers/watchtower.pdf
+  paper: /Projects/WatchTower/WatchTower.pdf
   overview: |
     WatchTower is a Transformer-based network anomaly detector designed for Raspberry Pi 5. It processes 28 packet-level features and uses memory tokens with a gated state update to retain context across windows. PROSER supplies synthetic latent outliers during training, while FedProx supports learning across heterogeneous network traffic.
 
@@ -94,6 +111,8 @@
     - "Added PROSER to the training pipeline to generate latent outliers for open-set anomaly detection."
     - "Optimized edge inference through INT8 quantization and hardware-aware TVM auto-tuning for Raspberry Pi 5."
   figures:
-    - image: /images/research/watchtower-live-detection.png
+    - image: /Projects/WatchTower/time-series-graph.png
+      width: 1200
+      height: 600
       alt: "Live anomaly predictions remain mostly below a 0.5 threshold before and after a DoS attack, and rise above 0.9 during the attack."
       caption: "Live anomaly detection with the optimized model. Confidence crosses the 0.5 decision threshold near window 95, remains high during the attack, and drops after the attack ends."

@@ -10,7 +10,9 @@ const openPdf = document.getElementById("open-pdf");
 try {
   const params = new URLSearchParams(window.location.search);
   const file = new URL(params.get("file") || "", window.location.origin);
-  if (file.origin !== window.location.origin || !file.pathname.includes("/files/papers/") || !file.pathname.endsWith(".pdf")) {
+  const isProjectPaper = /^\/Projects\/(?:VisConf\/VisConf|PARDA\/PARDA|FedCPR\/FedCPR|WatchTower\/WatchTower)\.pdf$/.test(file.pathname);
+  const isLegacyPaper = file.pathname.startsWith("/files/papers/") && file.pathname.endsWith(".pdf");
+  if (file.origin !== window.location.origin || !(isProjectPaper || isLegacyPaper)) {
     throw new Error("No research paper was specified.");
   }
   document.title = `${params.get("title") || "Research"} — full paper`;
