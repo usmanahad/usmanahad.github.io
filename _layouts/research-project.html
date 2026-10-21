@@ -50,17 +50,21 @@ layout: default
     </div>
   </section>
 
+  {% assign paper_file = project.paper | relative_url %}
+  {% if project.paper_version %}{% assign paper_file = paper_file | append: '?v=' | append: project.paper_version %}{% endif %}
   <section id="paper" class="project-section" aria-labelledby="paper-heading">
     <div class="project-paper-heading">
       <h2 id="paper-heading">Full paper</h2>
       <div class="project-paper-actions">
-        <a href="{{ project.paper | relative_url }}" target="_blank" rel="noopener">Open PDF <span aria-hidden="true">&nearr;</span></a>
-        <a href="{{ project.paper | relative_url }}" download>Download</a>
+        {% if project.arxiv %}<a href="{{ project.arxiv }}" target="_blank" rel="noopener">arXiv <span aria-hidden="true">&nearr;</span></a>{% endif %}
+        {% if project.paper_html %}<a href="{{ project.paper_html }}" target="_blank" rel="noopener">Read HTML <span aria-hidden="true">&nearr;</span></a>{% endif %}
+        <a href="{{ paper_file }}" target="_blank" rel="noopener">Open PDF <span aria-hidden="true">&nearr;</span></a>
+        <a href="{{ paper_file }}" download>Download</a>
       </div>
     </div>
     <p class="project-paper-hint">Scroll within the viewer to read the complete paper. Use the controls to change pages or zoom.</p>
-    <iframe class="project-paper-viewer" src="{{ '/assets/pdf-viewer/viewer.html' | relative_url }}?v=projects-1&amp;file={{ project.paper | relative_url | url_encode }}&amp;title={{ project.name | url_encode }}" title="{{ project.name }} full paper PDF viewer" loading="lazy" allowfullscreen></iframe>
-    <noscript><p>To read the paper without JavaScript, <a href="{{ project.paper | relative_url }}">open the PDF directly</a>.</p></noscript>
+    <iframe class="project-paper-viewer" src="{{ '/assets/pdf-viewer/viewer.html' | relative_url }}?v=projects-1&amp;file={{ paper_file | url_encode }}&amp;title={{ project.name | url_encode }}" title="{{ project.name }} full paper PDF viewer" loading="lazy" allowfullscreen></iframe>
+    <noscript><p>To read the paper without JavaScript, <a href="{{ paper_file }}">open the PDF directly</a>.</p></noscript>
   </section>
   <a class="project-back project-back--bottom" href="{{ '/research/' | relative_url }}"><span aria-hidden="true">&larr;</span> All research projects</a>
 </main>

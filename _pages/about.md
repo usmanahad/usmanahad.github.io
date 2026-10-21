@@ -19,6 +19,7 @@ I’m interested in understanding why models succeed or fail, then translating t
 
 ## Current
 
+- **Oct. 2026:** [VisConf is now available on arXiv](https://arxiv.org/abs/2610.24526).
 - 🎉 **[VisConf accepted](/research/visconf/):** The training-free quality-aware consensus framework for Best-of-N VLM reasoning was accepted to the **NeurIPS 2026 VLM4RWD Workshop**.
 - **Sep. 2026:** Submitted **PARDA**, an on-device audio privacy system for smart glasses using small language models, to **IEEE PerCom**.
 - **Aug. 2026:** Began serving as a Teaching Assistant for **AI on Edge Devices** at LUMS.
@@ -27,11 +28,11 @@ I’m interested in understanding why models succeed or fail, then translating t
 
 ## Selected research
 
-### [VisConf: Quality-Aware Consensus for Best-of-N VLM Reasoning](/research/visconf/)
+### [VisConf: Quality-Aware Consensus for Best-of-N in Vision-Language Model Reasoning](/research/visconf/)
 
 Developed a training-free selection framework that combines candidate-calibrated Self-Certainty, visual engagement, and Rank-Weighted Consensus. Across three VLMs, three benchmarks, and sampling budgets of 8, 16, and 32, VisConf achieved **56.36% mean accuracy**, led all baselines in **24 of 27 settings**, and exceeded Self-Consistency by 0.98 points.
 
-*Accepted to the NeurIPS 2026 VLM4RWD Workshop.*
+*Accepted to the NeurIPS 2026 VLM4RWD Workshop.* [arXiv](https://arxiv.org/abs/2610.24526)
 
 ### [PARDA: On-Device Audio Privacy for Smart Glasses using Small Language Models](/research/parda/)
 

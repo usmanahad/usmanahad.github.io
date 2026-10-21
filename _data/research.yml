@@ -7,6 +7,9 @@
   status: Accepted · NeurIPS 2026 VLM4RWD Workshop
   summary: "Selecting better VLM answers by combining visual engagement, confidence, and consensus across sampled reasoning paths."
   paper: /Projects/VisConf/VisConf.pdf
+  paper_version: arxiv-2610.24526v1
+  arxiv: https://arxiv.org/abs/2610.24526
+  paper_html: https://arxiv.org/html/2610.24526v1
   pipeline:
     image: /Projects/VisConf/main-method-diagram.png
     width: 3112
